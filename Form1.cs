@@ -16,5 +16,13 @@ namespace QuizzAndTest
         {
             InitializeComponent();
         }
+
+        private void btn_valider_Click(object sender, EventArgs e)
+        {
+            string result = "Bonjour ";
+            result += txt_prenom.Text +" "+ txt_nom.Text;
+            txt_afficher.Text = result;
+
+        }
     }
 }
