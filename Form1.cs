@@ -20,13 +20,12 @@ namespace QuizzAndTest
 
         private void btn_valider_Click(object sender, EventArgs e)
         {
-            if (txt_nom.Text != "" && txt_prenom.Text != "")
+            while (txt_nom.Text != "" && txt_prenom.Text != "" && combo_difficult.SelectedIndex >= 1 && combo_difficult.SelectedIndex <= 4)
             {
-                string result = "Bonjour ";
-                result += txt_prenom.Text + " " + txt_nom.Text;
-                txt_afficher.Text = result;
+                MessageBox.Show("Bienvenue et bon jeu!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
             }
-            else
+            /*else
             {
                 if (txt_nom.Text != "")
                 {
@@ -40,7 +39,7 @@ namespace QuizzAndTest
                 {
                     MessageBox.Show("Aucun nom ou prénom n'est rentré", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
+            }*/
 
         }
 
@@ -57,7 +56,6 @@ namespace QuizzAndTest
                 lbl_difficult.Font = new Font(lbl_difficult.Font, FontStyle.Bold);
                 lbl_nom.Font = new Font(lbl_nom.Font, FontStyle.Bold);
                 lbl_prenom.Font = new Font(lbl_prenom.Font, FontStyle.Bold);
-                lbl_rep.Font = new Font(lbl_rep.Font, FontStyle.Bold);
             }
             else
             {
@@ -65,7 +63,6 @@ namespace QuizzAndTest
                 lbl_difficult.Font = new Font(lbl_difficult.Font, FontStyle.Regular);
                 lbl_nom.Font = new Font(lbl_nom.Font, FontStyle.Regular);
                 lbl_prenom.Font = new Font(lbl_prenom.Font, FontStyle.Regular);
-                lbl_rep.Font = new Font(lbl_rep.Font, FontStyle.Regular);
             }
         }
 
