@@ -15,14 +15,60 @@ namespace QuizzAndTest
         public Form1()
         {
             InitializeComponent();
+            combo_difficult.Items.AddRange(new string[] { "Facile", "Moyen", "Difficile", "Enfer" });
         }
 
         private void btn_valider_Click(object sender, EventArgs e)
         {
-            string result = "Bonjour ";
-            result += txt_prenom.Text +" "+ txt_nom.Text;
-            txt_afficher.Text = result;
+            if (txt_nom.Text != "" && txt_prenom.Text != "")
+            {
+                string result = "Bonjour ";
+                result += txt_prenom.Text + " " + txt_nom.Text;
+                txt_afficher.Text = result;
+            }
+            else
+            {
+                if (txt_nom.Text != "")
+                {
+                    MessageBox.Show("Aucun nom n'est rentré", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (txt_prenom.Text != "")
+                {
+                    MessageBox.Show("Aucun prénom n'est rentré", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Aucun nom ou prénom n'est rentré", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combo_difficult_Click(object sender, EventArgs e)
+        {
+            if (combo_difficult.SelectedItem.ToString() == "Enfer")
+            {
+                this.BackColor = Color.Red;
+                lbl_difficult.Font = new Font(lbl_difficult.Font, FontStyle.Bold);
+                lbl_nom.Font = new Font(lbl_nom.Font, FontStyle.Bold);
+                lbl_prenom.Font = new Font(lbl_prenom.Font, FontStyle.Bold);
+                lbl_rep.Font = new Font(lbl_rep.Font, FontStyle.Bold);
+            }
+            else
+            {
+                this.BackColor = Color.FromArgb(153, 180, 209);
+                lbl_difficult.Font = new Font(lbl_difficult.Font, FontStyle.Regular);
+                lbl_nom.Font = new Font(lbl_nom.Font, FontStyle.Regular);
+                lbl_prenom.Font = new Font(lbl_prenom.Font, FontStyle.Regular);
+                lbl_rep.Font = new Font(lbl_rep.Font, FontStyle.Regular);
+            }
+        }
+
+        
     }
 }
