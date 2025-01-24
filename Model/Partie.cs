@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +23,8 @@ namespace QuizzAndTest.Model
             score = 0;
             difficulteMode=0;
             nbQuestion = 0;
+           
+            numQuestion = 0;
             questionList = listevouluQuestion;
             nbQuestion = listevouluQuestion.Count;
             
@@ -57,6 +60,74 @@ namespace QuizzAndTest.Model
                 changerImg(picbox_img,false, false);
             }
         }
+        private void aleatoireReponse(TextBox txtbox_question, GroupBox grpbox_rep)
+        {
+            int bonneReponse = questionList[numQuestion].reponse;
+            txtbox_question.Text = questionList[numQuestion].enonce;
+            List<int> reponseAleatoire = new List<int>() { 1, 2, 3, 4, 5 };
+            Random rnd = new Random();
+
+            for (int i = 1; i <= 5; i++)
+            {
+                int randIndex = rnd.Next(reponseAleatoire.Count);
+                int random = reponseAleatoire[randIndex];
+                reponseAleatoire.Remove(random);
+                string reponse = "";
+
+                //switch
+                switch (random)
+                {
+                    case 1:
+                        
+                        break;
+                    case 2:
+                        
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+
+                        break;
+                    case 5:
+
+                        break;
+                }
+
+                getCheckBox(i, grpbox_rep).Text = reponse;
+                if (bonneReponse == random)
+                {
+                    BonneReponse = i;
+                }
+            }
+        }
+        private CheckBox getCheckBox(int indice, GroupBox gd_reponse)
+        {
+            foreach (Control c in gd_reponse.Controls)
+            {
+                if (c.GetType() == typeof(CheckBox) && c.Name == "ckb_reponse" + indice.ToString())
+                {
+                    return ((CheckBox)c);
+                }
+            }
+            return null;
+        }
+
+
+        public void changerQuestion(TextBox txtbox_question, CheckBox chkbox_rep1, CheckBox chkbox_rep2, CheckBox chkbox_rep3, CheckBox chkbox_rep4, CheckBox chkbox_rep5, Form Form1, GroupBox grpbox_rep, PictureBox picbox_img)
+        {
+            if (numQuestion == nbQuestion)
+    {
+                aleatoireReponse(txtbox_question, grpbox_rep);
+                // On décoche les 5 checkbox
+
+            }
+            else
+            {
+                //appel de la méthode de fin de partie qui sera réalisé plus tard
+            }
+        }
+
 
 
     }

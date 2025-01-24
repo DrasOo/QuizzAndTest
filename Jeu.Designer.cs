@@ -46,8 +46,10 @@
             this.chkbox_rep4 = new System.Windows.Forms.CheckBox();
             this.chkbox_rep1 = new System.Windows.Forms.CheckBox();
             this.but_validation = new System.Windows.Forms.Button();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_img)).BeginInit();
             this.grpbox_rep.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_quizz
@@ -218,6 +220,11 @@
             this.but_validation.Text = "Valider";
             this.but_validation.UseVisualStyleBackColor = true;
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // Jeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +247,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picbox_img)).EndInit();
             this.grpbox_rep.ResumeLayout(false);
             this.grpbox_rep.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,5 +273,6 @@
         private System.Windows.Forms.CheckBox chkbox_rep4;
         private System.Windows.Forms.CheckBox chkbox_rep1;
         private System.Windows.Forms.Button but_validation;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
