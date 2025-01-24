@@ -36,15 +36,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtbox_ = new System.Windows.Forms.TextBox();
+            this.txtbox_question = new System.Windows.Forms.TextBox();
             this.txtbox_tempstot = new System.Windows.Forms.TextBox();
             this.picbox_img = new System.Windows.Forms.PictureBox();
             this.grpbox_rep = new System.Windows.Forms.GroupBox();
-            this.chkbox_rep1 = new System.Windows.Forms.CheckBox();
-            this.chkbox_rep4 = new System.Windows.Forms.CheckBox();
-            this.chkbox_rep3 = new System.Windows.Forms.CheckBox();
-            this.chkbox_rep2 = new System.Windows.Forms.CheckBox();
             this.chkbox_rep5 = new System.Windows.Forms.CheckBox();
+            this.chkbox_rep2 = new System.Windows.Forms.CheckBox();
+            this.chkbox_rep3 = new System.Windows.Forms.CheckBox();
+            this.chkbox_rep4 = new System.Windows.Forms.CheckBox();
+            this.chkbox_rep1 = new System.Windows.Forms.CheckBox();
             this.but_validation = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_img)).BeginInit();
             this.grpbox_rep.SuspendLayout();
@@ -118,14 +118,14 @@
             this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 8;
             // 
-            // txtbox_
+            // txtbox_question
             // 
-            this.txtbox_.Enabled = false;
-            this.txtbox_.Location = new System.Drawing.Point(101, 78);
-            this.txtbox_.Multiline = true;
-            this.txtbox_.Name = "txtbox_";
-            this.txtbox_.Size = new System.Drawing.Size(518, 73);
-            this.txtbox_.TabIndex = 9;
+            this.txtbox_question.Enabled = false;
+            this.txtbox_question.Location = new System.Drawing.Point(101, 78);
+            this.txtbox_question.Multiline = true;
+            this.txtbox_question.Name = "txtbox_question";
+            this.txtbox_question.Size = new System.Drawing.Size(518, 73);
+            this.txtbox_question.TabIndex = 9;
             // 
             // txtbox_tempstot
             // 
@@ -137,9 +137,11 @@
             // 
             // picbox_img
             // 
+            this.picbox_img.Image = global::QuizzAndTest.Properties.Resources.vrai;
             this.picbox_img.Location = new System.Drawing.Point(744, 78);
             this.picbox_img.Name = "picbox_img";
-            this.picbox_img.Size = new System.Drawing.Size(178, 156);
+            this.picbox_img.Size = new System.Drawing.Size(178, 161);
+            this.picbox_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbox_img.TabIndex = 11;
             this.picbox_img.TabStop = false;
             // 
@@ -157,46 +159,6 @@
             this.grpbox_rep.TabStop = false;
             this.grpbox_rep.Text = "Réponses possibles";
             // 
-            // chkbox_rep1
-            // 
-            this.chkbox_rep1.AutoSize = true;
-            this.chkbox_rep1.Location = new System.Drawing.Point(19, 34);
-            this.chkbox_rep1.Name = "chkbox_rep1";
-            this.chkbox_rep1.Size = new System.Drawing.Size(78, 17);
-            this.chkbox_rep1.TabIndex = 0;
-            this.chkbox_rep1.Text = "Réponse 1";
-            this.chkbox_rep1.UseVisualStyleBackColor = true;
-            // 
-            // chkbox_rep4
-            // 
-            this.chkbox_rep4.AutoSize = true;
-            this.chkbox_rep4.Location = new System.Drawing.Point(19, 139);
-            this.chkbox_rep4.Name = "chkbox_rep4";
-            this.chkbox_rep4.Size = new System.Drawing.Size(81, 17);
-            this.chkbox_rep4.TabIndex = 1;
-            this.chkbox_rep4.Text = "Réponse 4 ";
-            this.chkbox_rep4.UseVisualStyleBackColor = true;
-            // 
-            // chkbox_rep3
-            // 
-            this.chkbox_rep3.AutoSize = true;
-            this.chkbox_rep3.Location = new System.Drawing.Point(19, 103);
-            this.chkbox_rep3.Name = "chkbox_rep3";
-            this.chkbox_rep3.Size = new System.Drawing.Size(78, 17);
-            this.chkbox_rep3.TabIndex = 2;
-            this.chkbox_rep3.Text = "Réponse 3";
-            this.chkbox_rep3.UseVisualStyleBackColor = true;
-            // 
-            // chkbox_rep2
-            // 
-            this.chkbox_rep2.AutoSize = true;
-            this.chkbox_rep2.Location = new System.Drawing.Point(19, 65);
-            this.chkbox_rep2.Name = "chkbox_rep2";
-            this.chkbox_rep2.Size = new System.Drawing.Size(78, 17);
-            this.chkbox_rep2.TabIndex = 3;
-            this.chkbox_rep2.Text = "Réponse 2";
-            this.chkbox_rep2.UseVisualStyleBackColor = true;
-            // 
             // chkbox_rep5
             // 
             this.chkbox_rep5.AutoSize = true;
@@ -206,6 +168,46 @@
             this.chkbox_rep5.TabIndex = 4;
             this.chkbox_rep5.Text = "Réponse 5";
             this.chkbox_rep5.UseVisualStyleBackColor = true;
+            // 
+            // chkbox_rep2
+            // 
+            this.chkbox_rep2.AutoSize = true;
+            this.chkbox_rep2.Location = new System.Drawing.Point(19, 73);
+            this.chkbox_rep2.Name = "chkbox_rep2";
+            this.chkbox_rep2.Size = new System.Drawing.Size(78, 17);
+            this.chkbox_rep2.TabIndex = 3;
+            this.chkbox_rep2.Text = "Réponse 2";
+            this.chkbox_rep2.UseVisualStyleBackColor = true;
+            // 
+            // chkbox_rep3
+            // 
+            this.chkbox_rep3.AutoSize = true;
+            this.chkbox_rep3.Location = new System.Drawing.Point(19, 109);
+            this.chkbox_rep3.Name = "chkbox_rep3";
+            this.chkbox_rep3.Size = new System.Drawing.Size(78, 17);
+            this.chkbox_rep3.TabIndex = 2;
+            this.chkbox_rep3.Text = "Réponse 3";
+            this.chkbox_rep3.UseVisualStyleBackColor = true;
+            // 
+            // chkbox_rep4
+            // 
+            this.chkbox_rep4.AutoSize = true;
+            this.chkbox_rep4.Location = new System.Drawing.Point(19, 145);
+            this.chkbox_rep4.Name = "chkbox_rep4";
+            this.chkbox_rep4.Size = new System.Drawing.Size(81, 17);
+            this.chkbox_rep4.TabIndex = 1;
+            this.chkbox_rep4.Text = "Réponse 4 ";
+            this.chkbox_rep4.UseVisualStyleBackColor = true;
+            // 
+            // chkbox_rep1
+            // 
+            this.chkbox_rep1.AutoSize = true;
+            this.chkbox_rep1.Location = new System.Drawing.Point(19, 40);
+            this.chkbox_rep1.Name = "chkbox_rep1";
+            this.chkbox_rep1.Size = new System.Drawing.Size(78, 17);
+            this.chkbox_rep1.TabIndex = 0;
+            this.chkbox_rep1.Text = "Réponse 1";
+            this.chkbox_rep1.UseVisualStyleBackColor = true;
             // 
             // but_validation
             // 
@@ -225,7 +227,7 @@
             this.Controls.Add(this.grpbox_rep);
             this.Controls.Add(this.picbox_img);
             this.Controls.Add(this.txtbox_tempstot);
-            this.Controls.Add(this.txtbox_);
+            this.Controls.Add(this.txtbox_question);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -253,7 +255,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtbox_;
+        private System.Windows.Forms.TextBox txtbox_question;
         private System.Windows.Forms.TextBox txtbox_tempstot;
         private System.Windows.Forms.PictureBox picbox_img;
         private System.Windows.Forms.GroupBox grpbox_rep;

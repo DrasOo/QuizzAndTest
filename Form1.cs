@@ -20,10 +20,40 @@ namespace QuizzAndTest
 
         private void btn_valider_Click(object sender, EventArgs e)
         {
-            while (txt_nom.Text != "" && txt_prenom.Text != "" && combo_difficult.SelectedIndex >= 1 && combo_difficult.SelectedIndex <= 4)
+            string msg = "";
+            if (txt_nom.Text == "" || txt_prenom.Text == "" || combo_difficult.SelectedIndex == -1)
             {
-                MessageBox.Show("Bienvenue et bon jeu!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                if (txt_nom.Text == "")
+                {
+                    msg = "Aucun nom n'est rentré";
+                }
+                if (txt_prenom.Text == "")
+                {
+                    if (txt_nom.Text == "")
+                    {
+                        msg += " Et aucun prénom n'est rentré";
+                    }
+                    else
+                    {
+                        msg = "Aucun prénom n'est rentré";
+                    }
+                }
+                if (combo_difficult.SelectedIndex == -1)
+                    {
+                        msg = "Aucune difficulté choisi";
+                    }
+                    
                 
+                MessageBox.Show(msg, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+            }
+            else
+            {
+
+                Jeu J = new Jeu();
+                J.Show();
+                this.Hide();
             }
             /*else
             {
