@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuizzAndTest.Model
 {
@@ -15,14 +16,49 @@ namespace QuizzAndTest.Model
         public int BonneReponse;
         public int numQuestion;
 
-        public Partie(int score, int difficulteMode, int nbQuestion, List<Question> questionList, int bonneReponse, int numQuestion)
+      
+        public Partie(List<Question> listevouluQuestion)
         {
-            this.score = score;
-            this.difficulteMode = difficulteMode;
-            this.nbQuestion = nbQuestion;
-            this.questionList = questionList;
-            BonneReponse = bonneReponse;
-            this.numQuestion = numQuestion;
+            score = 0;
+            difficulteMode=0;
+            nbQuestion = 0;
+            questionList = listevouluQuestion;
+            nbQuestion = listevouluQuestion.Count;
+            
         }
+
+        private void changerImg(PictureBox picbox_img, bool BonneReponse, bool raz)
+        {
+            if (!raz)
+            {
+                if (BonneReponse)
+                {
+                    picbox_img.Image = Properties.Resources.vrai;
+                }
+                else
+                {
+                    picbox_img.Image = Properties.Resources.faux;
+                }
+            }
+        }
+        private void calculerScore()
+        {
+            score =+ 1;
+        }
+        public void validerReponse(int reponse, PictureBox picbox_img)
+        {
+            if (reponse == BonneReponse)
+            {
+                calculerScore(); // Il faut créer cette méthode privé qui ajoute +1 au score à chaque bonne réponse *FAIT
+                changerImg(picbox_img, true, false);
+            }
+            else
+            {
+                changerImg(picbox_img,false, false);
+            }
+        }
+
+
     }
+
 }
