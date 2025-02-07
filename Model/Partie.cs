@@ -16,6 +16,7 @@ namespace QuizzAndTest.Model
         public List<Question> questionList;
         public int BonneReponse;
         public int numQuestion;
+        
 
       
         public Partie(List<Question> listevouluQuestion)

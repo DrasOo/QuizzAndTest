@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuizzAndTest.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,34 @@ namespace QuizzAndTest
 {
     public partial class Jeu : Form
     {
+        int reponseQuestion = 0;
+        Partie partie;
+
         public Jeu()
         {
+            List<Question> questionList = new List<Question>();
+            partie = new Partie(questionList);
             InitializeComponent();
+            List<Question> ListeQuestions = new List<Question>();
+            ListeQuestions.Add(new Question("Quelle est la capitale de la France ?", 1, 1, "Paris", "Londres", "Berlin", "Madrid", "Rome"));
+            ListeQuestions.Add(new Question("Quelle est la capitale de l'Espagne ?", 4, 1, "Paris", "Londres", "Berlin", "Madrid", "Rome"));
+            ListeQuestions.Add(new Question("Quelle est la capitale de l'Allemagne ?", 3, 1, "Paris", "Londres", "Berlin", "Madrid", "Rome"));
+            ListeQuestions.Add(new Question("Quelle est la capitale de l'Italie ?", 5, 1, "Paris", "Londres", "Berlin", "Madrid", "Rome"));
+            ListeQuestions.Add(new Question("Quelle est la capitale de l'Angleterre ?", 2, 1, "Paris", "Londres", "Berlin", "Madrid", "Rome"));
+            ListeQuestions.Add(new Question("Quelle est la capitale de la Belgique ?", 1, 1, "Bruxelles", "Londres", "Berlin", "Madrid", "Rome"));
+            ListeQuestions.Add(new Question("Quelle est la capitale de la Suisse ?", 2, 1, "Bruxelles", "Berne", "Berlin", "Madrid", "Rome"));
+            ListeQuestions.Add(new Question("Quelle est la capitale du Luxembourg ?", 3, 1, "Bruxelles", "Berne", "Luxembourg", "Madrid", "Rome"));
+            ListeQuestions.Add(new Question("Quelle est la capitale du Portugal ?", 4, 1, "Bruxelles", "Berne", "Luxembourg", "Lisbonne", "Rome"));
+            ListeQuestions.Add(new Question("Quelle est la capitale de l'Autriche ?", 5, 1, "Bruxelles", "Berne", "Luxembourg", "Lisbonne", "Vienne"));
+
+            partie = new Partie(ListeQuestions);
+            partie.changerQuestion(txtbox_question, chkbox_rep1, chkbox_rep2, chkbox_rep3, chkbox_rep4, chkbox_rep5, this, grpbox_rep, picbox_img);
+
         }
 
-        private void but_validation_Click(object sender, EventArgs e)
+    }
+
+    private void but_validation_Click(object sender, EventArgs e)
         {
             
         }
