@@ -219,6 +219,7 @@
             this.but_validation.TabIndex = 13;
             this.but_validation.Text = "Valider";
             this.but_validation.UseVisualStyleBackColor = true;
+            this.but_validation.Click += new System.EventHandler(this.but_validation_Click);
             // 
             // fileSystemWatcher1
             // 

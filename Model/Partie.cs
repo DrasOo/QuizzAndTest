@@ -78,19 +78,19 @@ namespace QuizzAndTest.Model
                 switch (random)
                 {
                     case 1:
-                        
+                        reponse = questionList[numQuestion].proposition1;
                         break;
                     case 2:
-                        
+                        reponse = questionList[numQuestion].proposition2;
                         break;
                     case 3:
-
+                        reponse = questionList[numQuestion].proposition3;
                         break;
                     case 4:
-
+                        reponse = questionList[numQuestion].proposition4;
                         break;
                     case 5:
-
+                        reponse = questionList[numQuestion].proposition5;
                         break;
                 }
 
@@ -119,6 +119,11 @@ namespace QuizzAndTest.Model
             if (numQuestion == nbQuestion)
     {
                 aleatoireReponse(txtbox_question, grpbox_rep);
+                chkbox_rep1.Checked = false;
+                chkbox_rep2.Checked = false;
+                chkbox_rep3.Checked = false;
+                chkbox_rep4.Checked = false;
+                chkbox_rep5.Checked = false;
                 // On décoche les 5 checkbox
 
             }

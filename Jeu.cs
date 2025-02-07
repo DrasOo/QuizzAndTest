@@ -17,5 +17,9 @@ namespace QuizzAndTest
             InitializeComponent();
         }
 
+        private void but_validation_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
