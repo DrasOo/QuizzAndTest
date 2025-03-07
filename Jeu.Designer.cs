@@ -38,7 +38,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtbox_question = new System.Windows.Forms.TextBox();
             this.txtbox_tempstot = new System.Windows.Forms.TextBox();
-            this.picbox_img = new System.Windows.Forms.PictureBox();
             this.grpbox_rep = new System.Windows.Forms.GroupBox();
             this.chkbox_rep5 = new System.Windows.Forms.CheckBox();
             this.chkbox_rep2 = new System.Windows.Forms.CheckBox();
@@ -53,9 +52,11 @@
             this.lbl_joueur = new System.Windows.Forms.Label();
             this.lbl_difficulte = new System.Windows.Forms.Label();
             this.prgBar_timer = new System.Windows.Forms.ProgressBar();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_img)).BeginInit();
+            this.picbox_img = new System.Windows.Forms.PictureBox();
+            this.but_leave = new System.Windows.Forms.Button();
             this.grpbox_rep.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_img)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_quizz
@@ -80,7 +81,7 @@
             // lbl_tempstot
             // 
             this.lbl_tempstot.AutoSize = true;
-            this.lbl_tempstot.Location = new System.Drawing.Point(741, 25);
+            this.lbl_tempstot.Location = new System.Drawing.Point(711, 25);
             this.lbl_tempstot.Name = "lbl_tempstot";
             this.lbl_tempstot.Size = new System.Drawing.Size(62, 13);
             this.lbl_tempstot.TabIndex = 2;
@@ -138,20 +139,10 @@
             // txtbox_tempstot
             // 
             this.txtbox_tempstot.Enabled = false;
-            this.txtbox_tempstot.Location = new System.Drawing.Point(744, 41);
+            this.txtbox_tempstot.Location = new System.Drawing.Point(714, 41);
             this.txtbox_tempstot.Name = "txtbox_tempstot";
             this.txtbox_tempstot.Size = new System.Drawing.Size(178, 20);
             this.txtbox_tempstot.TabIndex = 10;
-            // 
-            // picbox_img
-            // 
-            this.picbox_img.Image = global::QuizzAndTest.Properties.Resources.Interrogation;
-            this.picbox_img.Location = new System.Drawing.Point(744, 78);
-            this.picbox_img.Name = "picbox_img";
-            this.picbox_img.Size = new System.Drawing.Size(178, 161);
-            this.picbox_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picbox_img.TabIndex = 11;
-            this.picbox_img.TabStop = false;
             // 
             // grpbox_rep
             // 
@@ -247,7 +238,7 @@
             // txtbox_joueur
             // 
             this.txtbox_joueur.Enabled = false;
-            this.txtbox_joueur.Location = new System.Drawing.Point(744, 440);
+            this.txtbox_joueur.Location = new System.Drawing.Point(714, 435);
             this.txtbox_joueur.Name = "txtbox_joueur";
             this.txtbox_joueur.Size = new System.Drawing.Size(178, 20);
             this.txtbox_joueur.TabIndex = 15;
@@ -255,7 +246,7 @@
             // txtbox_difficulte
             // 
             this.txtbox_difficulte.Enabled = false;
-            this.txtbox_difficulte.Location = new System.Drawing.Point(744, 493);
+            this.txtbox_difficulte.Location = new System.Drawing.Point(714, 493);
             this.txtbox_difficulte.Name = "txtbox_difficulte";
             this.txtbox_difficulte.Size = new System.Drawing.Size(178, 20);
             this.txtbox_difficulte.TabIndex = 16;
@@ -263,7 +254,7 @@
             // lbl_joueur
             // 
             this.lbl_joueur.AutoSize = true;
-            this.lbl_joueur.Location = new System.Drawing.Point(744, 409);
+            this.lbl_joueur.Location = new System.Drawing.Point(711, 406);
             this.lbl_joueur.Name = "lbl_joueur";
             this.lbl_joueur.Size = new System.Drawing.Size(39, 13);
             this.lbl_joueur.TabIndex = 17;
@@ -272,7 +263,7 @@
             // lbl_difficulte
             // 
             this.lbl_difficulte.AutoSize = true;
-            this.lbl_difficulte.Location = new System.Drawing.Point(744, 474);
+            this.lbl_difficulte.Location = new System.Drawing.Point(711, 477);
             this.lbl_difficulte.Name = "lbl_difficulte";
             this.lbl_difficulte.Size = new System.Drawing.Size(48, 13);
             this.lbl_difficulte.TabIndex = 18;
@@ -280,17 +271,40 @@
             // 
             // prgBar_timer
             // 
-            this.prgBar_timer.Location = new System.Drawing.Point(744, 255);
+            this.prgBar_timer.Location = new System.Drawing.Point(714, 255);
             this.prgBar_timer.Maximum = 15;
             this.prgBar_timer.Name = "prgBar_timer";
             this.prgBar_timer.Size = new System.Drawing.Size(178, 23);
             this.prgBar_timer.TabIndex = 19;
             // 
+            // picbox_img
+            // 
+            this.picbox_img.Image = global::QuizzAndTest.Properties.Resources.Interrogation;
+            this.picbox_img.Location = new System.Drawing.Point(714, 78);
+            this.picbox_img.Name = "picbox_img";
+            this.picbox_img.Size = new System.Drawing.Size(178, 161);
+            this.picbox_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbox_img.TabIndex = 11;
+            this.picbox_img.TabStop = false;
+            // 
+            // but_leave
+            // 
+            this.but_leave.BackColor = System.Drawing.Color.Red;
+            this.but_leave.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_leave.ForeColor = System.Drawing.Color.Black;
+            this.but_leave.Location = new System.Drawing.Point(928, 26);
+            this.but_leave.Name = "but_leave";
+            this.but_leave.Size = new System.Drawing.Size(50, 50);
+            this.but_leave.TabIndex = 20;
+            this.but_leave.Text = "❌";
+            this.but_leave.UseVisualStyleBackColor = false;
+            // 
             // Jeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 525);
+            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.but_leave);
             this.Controls.Add(this.prgBar_timer);
             this.Controls.Add(this.lbl_difficulte);
             this.Controls.Add(this.lbl_joueur);
@@ -310,11 +324,12 @@
             this.Controls.Add(this.lbl_tempstot);
             this.Controls.Add(this.lbl_question);
             this.Controls.Add(this.lbl_quizz);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Jeu";
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_img)).EndInit();
             this.grpbox_rep.ResumeLayout(false);
             this.grpbox_rep.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_img)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +362,6 @@
         private System.Windows.Forms.TextBox txtbox_difficulte;
         private System.Windows.Forms.TextBox txtbox_joueur;
         private System.Windows.Forms.ProgressBar prgBar_timer;
+        private System.Windows.Forms.Button but_leave;
     }
 }
