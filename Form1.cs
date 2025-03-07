@@ -51,7 +51,7 @@ namespace QuizzAndTest
             else
             {
 
-                Jeu J = new Jeu();
+                Jeu J = new Jeu(txt_nom.Text,txt_prenom.Text,combo_difficult.Text);
                 J.Show();
                 this.Hide();
             }

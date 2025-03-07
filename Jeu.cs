@@ -16,10 +16,8 @@ namespace QuizzAndTest
         int reponseQuestion = 0;
         Partie partie;
 
-        public Jeu()
+        private void Init()
         {
-            List<Question> questionList = new List<Question>();
-            partie = new Partie(questionList);
             InitializeComponent();
             List<Question> ListeQuestions = new List<Question>();
             ListeQuestions.Add(new Question("Quelle est la capitale de la France ?", 1, 1, "Paris", "Londres", "Berlin", "Madrid", "Rome"));
@@ -34,15 +32,57 @@ namespace QuizzAndTest
             ListeQuestions.Add(new Question("Quelle est la capitale de l'Autriche ?", 5, 1, "Bruxelles", "Berne", "Luxembourg", "Lisbonne", "Vienne"));
 
             partie = new Partie(ListeQuestions);
-            partie.changerQuestion(txtbox_question, chkbox_rep1, chkbox_rep2, chkbox_rep3, chkbox_rep4, chkbox_rep5, this, grpbox_rep, picbox_img);
+            partie.changerQuestion(txtbox_question, chkbox_rep1, chkbox_rep2, chkbox_rep3, chkbox_rep4, chkbox_rep5, this, grpbox_rep, picbox_img, null);
+            partie.gestionTimer(txtbox_tempstot, prgBar_timer, txtbox_question, chkbox_rep1, chkbox_rep2, chkbox_rep3, chkbox_rep4, chkbox_rep5, this, grpbox_rep, picbox_img, lbl_question, null);
 
         }
 
-    }
 
-    private void but_validation_Click(object sender, EventArgs e)
+        public Jeu(string nomJ, string PrenomJ, string difficultePartie)
         {
             
+            Init();
+            partie.nomJoueur = nomJ;
+            partie.prenomJoueur = PrenomJ;
+            partie.difficulte = difficultePartie;
+            txtbox_joueur.Text = nomJ + " " + PrenomJ;
+            txtbox_difficulte.Text = difficultePartie;
         }
+
+
+
+        private void but_validation_Click(object sender, EventArgs e)
+        {
+            partie.validerReponse(reponseQuestion, picbox_img);
+            partie.numQuestion++;
+            partie.changerQuestion(txtbox_question, chkbox_rep1, chkbox_rep2, chkbox_rep3, chkbox_rep4, chkbox_rep5, this, grpbox_rep, picbox_img,pnl_principal);
+            lbl_question.Text ="Question " +  (partie.numQuestion + 1).ToString();
+            reponseQuestion = 0;
+
+           
+
+        }
+
+        private void chkbox_rep1_Click(object sender, EventArgs e)
+        {
+            //Boucle permettant de décocher toutes les cases à cocher du formulaire
+            foreach (var box in grpbox_rep.Controls.OfType<CheckBox>())
+            {
+                box.Checked = false;
+            }
+
+            
+            ((CheckBox)sender).Checked = true;
+
+            reponseQuestion = int.Parse(((CheckBox)sender).Name.Substring(10, 1));
+            //Mettre dans une variable la réponse choisis par l’utilisateur
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }
