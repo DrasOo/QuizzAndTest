@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuizzAndTest.Model;
 
 namespace QuizzAndTest
 {
@@ -52,7 +53,8 @@ namespace QuizzAndTest
             {
 
                 Jeu J = new Jeu(txt_nom.Text,txt_prenom.Text,combo_difficult.Text);
-                J.Show();
+
+                (System.Windows.Forms.Application.OpenForms["Menu"] as Menu).openChildForm(J);
                 this.Hide();
             }
             /*else
@@ -96,6 +98,9 @@ namespace QuizzAndTest
             }
         }
 
-        
+        private void but_leave_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

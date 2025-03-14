@@ -105,19 +105,20 @@
             this.but_leave.BackColor = System.Drawing.Color.Red;
             this.but_leave.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_leave.ForeColor = System.Drawing.Color.Black;
-            this.but_leave.Location = new System.Drawing.Point(922, 20);
+            this.but_leave.Location = new System.Drawing.Point(922, 12);
             this.but_leave.Name = "but_leave";
             this.but_leave.Size = new System.Drawing.Size(50, 50);
             this.but_leave.TabIndex = 21;
             this.but_leave.Text = "❌";
             this.but_leave.UseVisualStyleBackColor = false;
+            this.but_leave.Click += new System.EventHandler(this.but_leave_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(983, 535);
             this.Controls.Add(this.but_leave);
             this.Controls.Add(this.combo_difficult);
             this.Controls.Add(this.lbl_difficult);

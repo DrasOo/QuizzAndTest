@@ -31,5 +31,6 @@ namespace QuizzAndTest.Model
             formEnfant.BringToFront();
             formEnfant.Show();
         }
+
     }
 }

@@ -30,10 +30,10 @@
         {
             this.menu_bar = new System.Windows.Forms.MenuStrip();
             this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.démarrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesQuestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.démarrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.menu_bar.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +59,13 @@
             this.sToolStripMenuItem.Size = new System.Drawing.Size(36, 20);
             this.sToolStripMenuItem.Text = "Jeu";
             // 
+            // démarrerToolStripMenuItem
+            // 
+            this.démarrerToolStripMenuItem.Name = "démarrerToolStripMenuItem";
+            this.démarrerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.démarrerToolStripMenuItem.Text = "Démarrer";
+            this.démarrerToolStripMenuItem.Click += new System.EventHandler(this.démarrerToolStripMenuItem_Click);
+            // 
             // scoreToolStripMenuItem
             // 
             this.scoreToolStripMenuItem.Name = "scoreToolStripMenuItem";
@@ -76,12 +83,6 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
-            // 
-            // démarrerToolStripMenuItem
-            // 
-            this.démarrerToolStripMenuItem.Name = "démarrerToolStripMenuItem";
-            this.démarrerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.démarrerToolStripMenuItem.Text = "Démarrer";
             // 
             // panel_menu
             // 
@@ -116,6 +117,6 @@
         private System.Windows.Forms.ToolStripMenuItem gestionDesQuestionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem démarrerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.Panel panel_menu;
+        public System.Windows.Forms.Panel panel_menu;
     }
 }

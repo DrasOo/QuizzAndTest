@@ -46,7 +46,6 @@
             this.chkbox_rep1 = new System.Windows.Forms.CheckBox();
             this.but_validation = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.pnl_principal = new System.Windows.Forms.Panel();
             this.txtbox_joueur = new System.Windows.Forms.TextBox();
             this.txtbox_difficulte = new System.Windows.Forms.TextBox();
             this.lbl_joueur = new System.Windows.Forms.Label();
@@ -228,13 +227,6 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // pnl_principal
-            // 
-            this.pnl_principal.Location = new System.Drawing.Point(2, -2);
-            this.pnl_principal.Name = "pnl_principal";
-            this.pnl_principal.Size = new System.Drawing.Size(932, 24);
-            this.pnl_principal.TabIndex = 14;
-            // 
             // txtbox_joueur
             // 
             this.txtbox_joueur.Enabled = false;
@@ -292,25 +284,25 @@
             this.but_leave.BackColor = System.Drawing.Color.Red;
             this.but_leave.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_leave.ForeColor = System.Drawing.Color.Black;
-            this.but_leave.Location = new System.Drawing.Point(928, 26);
+            this.but_leave.Location = new System.Drawing.Point(922, 12);
             this.but_leave.Name = "but_leave";
             this.but_leave.Size = new System.Drawing.Size(50, 50);
             this.but_leave.TabIndex = 20;
             this.but_leave.Text = "❌";
             this.but_leave.UseVisualStyleBackColor = false;
+            this.but_leave.Click += new System.EventHandler(this.but_leave_Click);
             // 
             // Jeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(983, 535);
             this.Controls.Add(this.but_leave);
             this.Controls.Add(this.prgBar_timer);
             this.Controls.Add(this.lbl_difficulte);
             this.Controls.Add(this.lbl_joueur);
             this.Controls.Add(this.txtbox_difficulte);
             this.Controls.Add(this.txtbox_joueur);
-            this.Controls.Add(this.pnl_principal);
             this.Controls.Add(this.but_validation);
             this.Controls.Add(this.grpbox_rep);
             this.Controls.Add(this.picbox_img);
@@ -356,7 +348,6 @@
         private System.Windows.Forms.CheckBox chkbox_rep1;
         private System.Windows.Forms.Button but_validation;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
-        private System.Windows.Forms.Panel pnl_principal;
         private System.Windows.Forms.Label lbl_difficulte;
         private System.Windows.Forms.Label lbl_joueur;
         private System.Windows.Forms.TextBox txtbox_difficulte;

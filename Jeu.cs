@@ -55,13 +55,15 @@ namespace QuizzAndTest
         {
             partie.validerReponse(reponseQuestion, picbox_img);
             partie.numQuestion++;
-            partie.changerQuestion(txtbox_question, chkbox_rep1, chkbox_rep2, chkbox_rep3, chkbox_rep4, chkbox_rep5, this, grpbox_rep, picbox_img,pnl_principal);
+            partie.changerQuestion(txtbox_question, chkbox_rep1, chkbox_rep2, chkbox_rep3, chkbox_rep4, chkbox_rep5, this, grpbox_rep, picbox_img, (System.Windows.Forms.Application.OpenForms["Menu"] as Menu).panel_menu);
             lbl_question.Text ="Question " +  (partie.numQuestion + 1).ToString();
             reponseQuestion = 0;
 
            
 
         }
+
+        
 
         private void chkbox_rep1_Click(object sender, EventArgs e)
         {
@@ -83,6 +85,11 @@ namespace QuizzAndTest
 
         }
 
-        
+        private void but_leave_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
     }
 }
