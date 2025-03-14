@@ -36,5 +36,10 @@ namespace QuizzAndTest
         {
             openChildForm(new Form1());
         }
+
+        private void gestionDesQuestionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Donnees());
+        }
     }
 }

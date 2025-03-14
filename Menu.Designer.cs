@@ -77,6 +77,7 @@
             this.gestionDesQuestionToolStripMenuItem.Name = "gestionDesQuestionToolStripMenuItem";
             this.gestionDesQuestionToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
             this.gestionDesQuestionToolStripMenuItem.Text = "Gestion des questions ";
+            this.gestionDesQuestionToolStripMenuItem.Click += new System.EventHandler(this.gestionDesQuestionToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
