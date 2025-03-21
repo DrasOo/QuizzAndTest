@@ -11,7 +11,7 @@ namespace QuizzAndTest.Model
     {
       
         private MySqlConnection mySqlCo;
-        public MySqlTransaction MySqlCo { get; internal set; }
+        public MySqlConnection MySqlCo { get { return mySqlCo; } set { mySqlCo = value; } }
 
         private string serveurBDD;    
         private string nomBDD;   
@@ -21,14 +21,12 @@ namespace QuizzAndTest.Model
         public Connection()
         {
             serveurBDD = "localhost";
-            nomBDD = "bdd_quizzandtest";
+            nomBDD = "bdd_quizenzo";
             loginBDD = "root";
             mdpBDD = "";
             initConnexion();
         }
-
-      
-
+       
         private void initConnexion()
         {
             mySqlCo = new MySqlConnection("Server=" + serveurBDD + ";Database=" + nomBDD + ";User ID=" + loginBDD + ";Password=" + mdpBDD);

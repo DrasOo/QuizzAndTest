@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.but_leave = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.datagv_tab = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.datagv_tab)).BeginInit();
             this.SuspendLayout();
             // 
             // but_leave
@@ -46,16 +46,16 @@
             this.but_leave.UseVisualStyleBackColor = false;
             this.but_leave.Click += new System.EventHandler(this.but_leave_Click);
             // 
-            // dataGridView1
+            // datagv_tab
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(49, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 453);
-            this.dataGridView1.TabIndex = 22;
+            this.datagv_tab.AllowUserToAddRows = false;
+            this.datagv_tab.AllowUserToDeleteRows = false;
+            this.datagv_tab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagv_tab.Location = new System.Drawing.Point(49, 34);
+            this.datagv_tab.Name = "datagv_tab";
+            this.datagv_tab.ReadOnly = true;
+            this.datagv_tab.Size = new System.Drawing.Size(618, 453);
+            this.datagv_tab.TabIndex = 22;
             // 
             // Donnees
             // 
@@ -63,12 +63,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(983, 535);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.datagv_tab);
             this.Controls.Add(this.but_leave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Donnees";
             this.Text = "Données";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagv_tab)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -76,6 +76,6 @@
         #endregion
 
         private System.Windows.Forms.Button but_leave;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView datagv_tab;
     }
 }
