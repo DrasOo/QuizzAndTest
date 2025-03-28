@@ -39,6 +39,31 @@ namespace QuizzAndTest.Controllers
             return dt;
 
         }
+        
+        public DataTable GetListeQuestionRecherche(string difficulte,string rechercheMot)
+        {
+            dt = new DataTable();
+            conn = new Connection();
+            string rqtSql = "SELECT IDQUESTION, ENONCEQUESTION AS 'QUESTION', d.LABELDIFFICULTE AS 'DIFFICULTE' FROM QUESTION q INNER JOIN DIFFICULTE d ON q.IDDIFFICULTE = d.IDDIFFICULTE WHERE ENONCEQUESTION LIKE @rechercheMot AND d.LABELDIFFICULTE = @difficulte";
+            try
+            {
+                using (MySqlCommand cmd = new MySqlCommand(rqtSql, conn.MySqlCo))
+                {
+                    conn.MySqlCo.Open();
+                    cmd.Parameters.AddWithValue("@rechercheMot", rechercheMot);
+                    cmd.Parameters.AddWithValue("@difficulte", difficulte);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    dt.Load(reader);
+
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Erreur 3", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign, true);
+            }
+            return dt;
+
+        }
 
     }
 }
